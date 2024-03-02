@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "variables.css";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--poppins);
+}
+
+body{
+    background-color: var(--red);
+}
+
+.container{
+    width: min(90%, 500px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.5rem;
+    padding: 4rem 2rem;
+    background-color: var(--primary-bg);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+.minuteOptions{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 0 0 2em 0;
+    display: none;
+}
+
+.minutes {
+    background-color: var(--offWhite);
+    color: var(--dark);
+    border-radius: 0.5em;
+    font-weight: 600;
+    padding: 1em 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid white;
+    box-shadow: 0 0 0 0 black;
+}
+
+.minutes:hover {
+    background-color: var(--green);
+    color: var(--offWhite);
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+}
+  
+.minutes:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+.studyOptions{
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.options {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--dark);
+    color: var(--offWhite);
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid white;
+    box-shadow: 0 0 0 0 black;
+}
+
+.options:hover {
+    background-color: var(--offWhite);
+    color: black;
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+}
+  
+.options:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+.focus {
+    background-color: var(--purple);
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid white;
+    box-shadow: 0 0 0 0 black;
+}
+
+.focus:hover {
+    background-color: var(--offWhite);
+    color: black;
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+}
+  
+.focus:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+.timerControls{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+#time {
+    text-align: center;
+    color: var(--offWhite);
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.timerButtons{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#startButton,
+#pauseButton,
+#resetButton {
+    padding: 1rem 2rem;
+    margin-top: 2em;
+    border-radius: 0.5rem;
+    background-color: var(--offWhite);
+    color: var(--dark);
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid white;
+    box-shadow: 0 0 0 0 black;
+    cursor: pointer;
+}
+
+#startButton:hover {
+    background-color: var(--green);
+    color: var(--offWhite);
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+}
+  
+#startButton:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+#pauseButton:hover {
+    background-color: var(--red);
+    color: var(--offWhite);
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+}
+  
+#pauseButton:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+#resetButton:hover {
+    background-color: var(--red);
+    color: var(--offWhite);
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+}
+  
+#resetButton:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+@media screen and (max-width: 540px) {
+    .container{
+        width: min(80%, 400px);
+        padding: 3rem 1rem;
+    }
+    .minuteOptions{
+        gap: 1em;
+    }
+    .options,
+    #startButton,
+    #pauseButton,
+    #resetButton {
+        padding: 0.5rem 1rem;
+    }
+    #time{
+        font-size: 4em;
+    }
+}

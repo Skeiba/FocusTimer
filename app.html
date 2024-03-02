@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDN Timer</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js" defer></script>
+    <link rel="shortcut icon" href="assets/gdnLogo.png" type="image/x-icon">
+</head>
+<body>
+    <audio id="alarmSound">
+        <source src="assets/ringtone.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div class="container">
+        <div class="minuteOptions" id="minuteOptions">
+            <button id="defaultTime" class="minutes">25</button>
+            <button id="sixtyMinuteTime" class="minutes">60</button>
+            <button id="ninetyMinuteTime" class="minutes">90</button>
+        </div>
+        <div class="studyOptions">
+            <button id="focusButton" class="options focus">Focus</button>
+            <button id="shortBreak" class="options shortBreak">Short Break</button>
+            <button id="longBreak" class="options longBreak">Long Break</button>
+        </div>
+        <div class="timerControls">
+            <span id="time"></span>
+            <div class="timerButtons">
+                <button id="startButton" class="show">Start</button>
+                <button id="pauseButton" class="hide">Pause</button>
+                <button id="resetButton" class="hide">Reset</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
