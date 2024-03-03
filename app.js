@@ -133,6 +133,7 @@ function startTimer() {
 // Function to Update Timer
 function updateTimer() {
     count--;
+    clockSound();
     if (count <= 0) {
         pauseTimer();
         playAlarmSound();
@@ -161,6 +162,11 @@ function playAlarmSound() {
 function buttonClickSound(){
     let buttonClick = document.getElementById("buttonClick");
     buttonClick.play();
+}
+
+function clockSound(){
+    let clock = document.getElementById("clock");
+    clock.play();
 }
 
 // Function to Vibrate Device
