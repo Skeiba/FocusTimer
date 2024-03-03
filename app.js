@@ -23,14 +23,17 @@ let selectedTime = 24;
 // Event Listeners for Time Selection Buttons
 defaultTime.addEventListener('click', () => {
     displayTime(24);
+    buttonClickSound();
 });
 
 sixtyMinuteTime.addEventListener('click', () => {
     displayTime(59);
+    buttonClickSound();
 });
 
 ninetyMinuteTime.addEventListener('click', () => {
     displayTime(89);
+    buttonClickSound();
 });
 
 // Function to Display Time
@@ -59,6 +62,7 @@ focusButton.addEventListener('click', () => {
     pauseTimer();
     displayTime(24);
     showTimeOptions();
+    buttonClickSound();
 });
 
 shortBreakButton.addEventListener('click', () => {
@@ -67,6 +71,7 @@ shortBreakButton.addEventListener('click', () => {
     pauseTimer();
     displayTime(4);
     hideTimeOptions();
+    buttonClickSound();
 });
 
 longBreakButton.addEventListener('click', () => {
@@ -75,6 +80,7 @@ longBreakButton.addEventListener('click', () => {
     pauseTimer();
     displayTime(14);
     hideTimeOptions();
+    buttonClickSound();
 });
 
 // Function to Remove Focus from Buttons
@@ -98,15 +104,18 @@ function hideTimeOptions() {
 // Event Listeners for Start, Pause, and Reset Buttons
 startButton.addEventListener('click', () => {
     startTimer();
+    buttonClickSound();
 });
 
 pauseButton.addEventListener('click', () => {
     pauseTimer();
+    buttonClickSound();
 });
 
 resetButton.addEventListener('click', () => {
     pauseTimer();
     displayTime(selectedTime);
+    buttonClickSound();
 });
 
 // Function to Start Timer
@@ -147,6 +156,11 @@ function pauseTimer() {
 function playAlarmSound() {
     let alarmSound = document.getElementById("alarmSound");
     alarmSound.play();
+}
+
+function buttonClickSound(){
+    let buttonClick = document.getElementById("buttonClick");
+    buttonClick.play();
 }
 
 // Function to Vibrate Device
