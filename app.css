@@ -212,18 +212,35 @@ body{
 @media screen and (max-width: 540px) {
     .container{
         width: min(80%, 400px);
-        padding: 3rem 1rem;
+        padding: 2rem 1rem;
     }
     .minuteOptions{
         gap: 1em;
     }
+    #time{
+        font-size: 3.5em;
+    }
+}
+@media screen and (max-width: 487px) {
+    .container{
+        width: min(80%, 400px);
+        padding: 2rem 0.25rem;
+    }
+    .minutes,
     .options,
     #startButton,
     #pauseButton,
     #resetButton {
         padding: 0.5rem 1rem;
     }
-    #time{
-        font-size: 4em;
+}
+
+@media screen and (max-width: 396px) {
+    .container{
+        width: min(80%, 400px);
+        padding: 2rem 5px;
+    }
+    .timerButtons{
+        gap: 0.5em;
     }
 }
