@@ -37,6 +37,29 @@ ninetyMinuteTime.addEventListener('click', () => {
     displayTime(89);
     buttonClickSound();
 });
+// SOUND OFF - ON
+let muteButton = document.getElementById('muteButton');
+let audioElements = document.querySelectorAll('audio');
+let isMuted = false;
+muteButton.addEventListener('click', function() {
+    isMuted = !isMuted;
+    toggleMute(audioElements);
+    updateButtonText();
+});
+function toggleMute(elements) {
+    elements.forEach(function(element) {
+        element.muted = isMuted;
+    });
+}
+function updateButtonText() {
+    if (isMuted) {
+        muteButton.innerText = 'Sound off';
+        muteButton.style.backgroundColor = "var(--red)";
+    } else {
+        muteButton.innerText = 'Sound On';
+        muteButton.style.backgroundColor = "var(--green)";
+    }
+}
 
 // Function to Display Time
 function displayTime(minutes) {
