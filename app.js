@@ -12,6 +12,8 @@ let startButton = document.getElementById("startButton");
 let pauseButton = document.getElementById("pauseButton");
 let resetButton = document.getElementById("resetButton");
 
+let background = document.getElementById('background');
+
 let buttons = document.querySelectorAll(".options");
 
 // Timer Variables
@@ -63,6 +65,7 @@ focusButton.addEventListener('click', () => {
     displayTime(24);
     showTimeOptions();
     buttonClickSound();
+    background.style.backgroundColor = "var(--red)";
 });
 
 shortBreakButton.addEventListener('click', () => {
@@ -72,6 +75,7 @@ shortBreakButton.addEventListener('click', () => {
     displayTime(4);
     hideTimeOptions();
     buttonClickSound();
+    background.style.backgroundColor = "var(--relax1)";
 });
 
 longBreakButton.addEventListener('click', () => {
@@ -81,6 +85,7 @@ longBreakButton.addEventListener('click', () => {
     displayTime(14);
     hideTimeOptions();
     buttonClickSound();
+    background.style.backgroundColor = "var(--relax2)";
 });
 
 // Function to Remove Focus from Buttons
