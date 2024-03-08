@@ -164,7 +164,7 @@ function updateTimer() {
     clockSound();
     if (count <= 0) {
         pauseTimer();
-        playAlarmSound();
+        playAlarmSound(2);
         vibrateDevice();
         displayTime(selectedTime);
         return;
@@ -182,9 +182,15 @@ function pauseTimer() {
 }
 
 // Function to Play Alarm Sound
-function playAlarmSound() {
+function playAlarmSound(loopCount) {
     let alarmSound = document.getElementById("alarmSound");
+    alarmSound.loop = true;
     alarmSound.play();
+    // After a certain duration, stop the loop
+    setTimeout(() => {
+        // Set loop to false to stop looping
+        alarmSound.loop = false;
+    }, alarmSound.duration * loopCount * 1000);
 }
 
 function buttonClickSound(){
